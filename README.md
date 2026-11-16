@@ -2,7 +2,7 @@
 
 **Instagram data API · Instagram profile and follower count · Instagram posts and Reels · Instagram comments · Instagram hashtag posts · Reel transcripts.**
 
-Examples for the [okdata](https://okdata.online/?src=gh-instagram-api) Instagram API: 8 live endpoints behind one API key, pay per call from $0.002, and a failed call costs nothing. No Instagram login, no cookies and no browser, so there is no account to get blocked.
+Examples for the [okdata](https://okdata.online/?src=gh-instagram-api) Instagram API: 8 live endpoints behind one API key, pay per call from $0.002. No Instagram login, no cookies and no browser, so there is no account to get blocked.
 
 [Sign up free ($0.10 of trial credit)](https://okdata.online/signup/?src=gh-instagram-api) · [All Instagram endpoints](https://okdata.online/apis/instagram/?src=gh-instagram-api) · [Use it from Claude, Cursor or any MCP client](https://okdata.online/mcp/?src=gh-instagram-api)
 
@@ -64,7 +64,7 @@ Then ask in plain words, for example "Instagram account search: nike". The agent
 
 **Do I need a Instagram account?** No. The data is public content, fetched on the server; your own account is never involved.
 
-**How is it billed?** Each endpoint has its own price, listed above for one call; endpoints billed per item count what comes back. Failed calls, timeouts included, are free. New accounts get $0.10 to try; after that you top up as you go, with no subscription. Pricing: https://okdata.online/pricing/
+**How is it billed?** Each endpoint has its own price, listed above for one call; endpoints billed per item count what comes back. A call that reached the data source is charged even when it comes back empty, not found or failed (one item for per-item endpoints); calls stopped before reaching a source (bad parameters, balance) are free. New accounts get $0.10 to try; after that you top up as you go, with no subscription. Pricing: https://okdata.online/pricing/
 
 **Why not the Instagram Graph API?** It mostly reads the business and creator accounts that connect to your app. This returns public profiles, posts, Reels and comments of any public account, with no app review.
 
@@ -76,7 +76,7 @@ Then ask in plain words, for example "Instagram account search: nike". The agent
 
 **Instagram 数据 API · Instagram 账号信息 · Instagram 帖子和 Reels · Instagram 评论采集 · Instagram 话题 · Reels 字幕。**
 
-okdata 的Instagram接口示例：8 个接口在线可用，一个 API Key 调用，按次计费（$0.002 起），失败不扣费，不用登录平台账号、不用 Cookie。中文文档：https://okdata.online/zh/apis/instagram/?src=gh-instagram-api · 注册：https://okdata.online/zh/signup/?src=gh-instagram-api · 接入 AI（MCP）：https://okdata.online/zh/mcp/?src=gh-instagram-api
+okdata 的Instagram接口示例：8 个接口在线可用，一个 API Key 调用，按次计费（$0.002 起），不用登录平台账号、不用 Cookie。中文文档：https://okdata.online/zh/apis/instagram/?src=gh-instagram-api · 注册：https://okdata.online/zh/signup/?src=gh-instagram-api · 接入 AI（MCP）：https://okdata.online/zh/mcp/?src=gh-instagram-api
 
 ## License
 
