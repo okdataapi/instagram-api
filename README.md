@@ -1,28 +1,28 @@
-# Instagram 数据接口（Instagram API）：账号、帖子和 Reels、评论、话题、字幕
+# Instagram API: profiles, posts and Reels, comments, hashtags and Reel transcripts
 
-**Instagram 数据 API · Instagram 账号信息 · Instagram 帖子和 Reels · Instagram 评论采集 · Instagram 话题 · Reels 字幕。**
+**Instagram data API · Instagram profile and follower count · Instagram posts and Reels · Instagram comments · Instagram hashtag posts · Reel transcripts.**
 
-这个仓库是 [okdata](https://okdata.online/zh/?src=gh-instagram-api) 的Instagram接口示例：8 个接口在线可用，一个 API Key 调用，按次计费（$0.002 起），失败不扣费。不用登录平台账号，不用 Cookie，不开浏览器，所以也不存在账号被风控的问题。
+Examples for the [okdata](https://okdata.online/?src=gh-instagram-api) Instagram API: 8 live endpoints behind one API key, pay per call from $0.002, and a failed call costs nothing. No Instagram login, no cookies and no browser, so there is no account to get blocked.
 
-[免费注册拿 Key（送 $0.1 试用额度）](https://okdata.online/zh/signup/?src=gh-instagram-api) · [全部接口文档](https://okdata.online/zh/apis/?src=gh-instagram-api) · [接入 AI（MCP）](https://okdata.online/zh/mcp/?src=gh-instagram-api)
+[Sign up free ($0.10 of trial credit)](https://okdata.online/signup/?src=gh-instagram-api) · [All Instagram endpoints](https://okdata.online/apis/instagram/?src=gh-instagram-api) · [Use it from Claude, Cursor or any MCP client](https://okdata.online/mcp/?src=gh-instagram-api)
 
-## 接口清单
+## Endpoints
 
-| 接口 | 说明 | 价格 | 路径 |
+| Endpoint | What it returns | Price | Path |
 |---|---|---|---|
-| [Instagram 账号信息](https://okdata.online/zh/apis/instagram/users/get/) | 按用户名取 Instagram 账号：名称、简介、粉丝数、关注数、帖子数、认证、是否私密，以及主页上的网站和链接。 | $0.004 / 次 | `GET /v1/instagram/users/get` |
-| [Instagram 账号帖子](https://okdata.online/zh/apis/instagram/users/posts/list/) | 账号发布的帖子，从新到旧，每页 12 条，也可以只要 Reels：文案、点赞、评论、播放、发布时间、图片，以及合拍帖的其他作者。 | $0.004 / 次 | `GET /v1/instagram/users/posts/list` |
-| [Instagram 帖子详情](https://okdata.online/zh/apis/instagram/posts/get/) | 按短码或链接取一条帖子或 Reel：文案、作者、点赞、评论和播放、图片，以及合拍帖的其他作者。 | $0.004 / 次 | `GET /v1/instagram/posts/get` |
-| [Instagram 帖子评论](https://okdata.online/zh/apis/instagram/posts/comments/list/) | 帖子或 Reel 下的评论，从新到旧，每页约 15 条：内容、评论者、点赞和发布时间。 | $0.004 / 次 | `GET /v1/instagram/posts/comments/list` |
-| [Instagram 评论回复](https://okdata.online/zh/apis/instagram/comments/replies/list/) | 按评论 ID 和所在帖子的短码取一条评论下的回复：内容、回复者、点赞和发布时间。 | $0.004 / 次 | `GET /v1/instagram/comments/replies/list` |
-| [Instagram 话题帖子](https://okdata.online/zh/apis/instagram/hashtags/posts/list/) | 某个话题下的公开帖子，每页约 10 条，按搜索引擎收录的顺序：文案、作者、点赞、评论和发布时间。不是话题下的全部帖子，也不按时间排。 | $0.004 / 次 | `GET /v1/instagram/hashtags/posts/list` |
-| [Instagram 视频字幕](https://okdata.online/zh/apis/instagram/posts/transcript/get/) | Reel 或视频帖子里说的话，带时间戳，按短码或链接取。视频最长两分钟。 | $0.004 / 次 | `GET /v1/instagram/posts/transcript/get` |
-| [Instagram 账号搜索](https://okdata.online/zh/apis/instagram/users/search/) | 按关键词找 Instagram 账号，一次约 20 个，没有下一页：用户名、名称、头像、认证和是否私密。 | $0.002 / 次 | `GET /v1/instagram/users/search` |
+| [Instagram account profile](https://okdata.online/apis/instagram/users/get/) | An Instagram account by handle: name, bio, followers, following, post count, verification, whether it is private, and the website and links the profile gives. | $0.004 a call | `GET /v1/instagram/users/get` |
+| [Instagram account posts](https://okdata.online/apis/instagram/users/posts/list/) | An account's posts, newest first, 12 a page, or its reels only: caption, likes, comments, plays, time posted, images and the other authors of a collab post. | $0.004 a call | `GET /v1/instagram/users/posts/list` |
+| [Instagram post detail](https://okdata.online/apis/instagram/posts/get/) | One post or reel by shortcode or link: caption, author, likes, comments and plays, images, and the other authors of a collab post. | $0.004 a call | `GET /v1/instagram/posts/get` |
+| [Instagram post comments](https://okdata.online/apis/instagram/posts/comments/list/) | Comments on a post or reel, newest first, about 15 a page: text, commenter, likes and time posted. | $0.004 a call | `GET /v1/instagram/posts/comments/list` |
+| [Instagram comment replies](https://okdata.online/apis/instagram/comments/replies/list/) | The replies to one comment, by the comment's ID and its post's shortcode: text, replier, likes and time posted. | $0.004 a call | `GET /v1/instagram/comments/replies/list` |
+| [Instagram hashtag posts](https://okdata.online/apis/instagram/hashtags/posts/list/) | Public posts under a hashtag, about 10 a page, as search engines find them: caption, author, likes, comments and time posted. Not every post under the tag, and not in time order. | $0.004 a call | `GET /v1/instagram/hashtags/posts/list` |
+| [Instagram reel transcript](https://okdata.online/apis/instagram/posts/transcript/get/) | What is said in a reel or video post, by shortcode or link, with timestamps. Videos up to two minutes long. | $0.004 a call | `GET /v1/instagram/posts/transcript/get` |
+| [Instagram account search](https://okdata.online/apis/instagram/users/search/) | Find Instagram accounts by keyword, about 20 in one answer and no further pages: handle, name, avatar, verification and whether it is private. | $0.002 a call | `GET /v1/instagram/users/search` |
 
-## 快速开始
+## Quick start
 
-1. 在 [okdata 控制台](https://okdata.online/zh/signup/?src=gh-instagram-api) 用邮箱注册，拿到 `okd_` 开头的 Key。
-2. 调一次接口：
+1. Sign up at the [okdata console](https://okdata.online/signup/?src=gh-instagram-api) with your email and copy the key that starts with `okd_`.
+2. Make a call:
 
 ```bash
 export OKDATA_API_KEY=okd_...
@@ -31,19 +31,19 @@ curl -G "https://api.okdata.online/v1/instagram/users/search" \
   --data-urlencode 'query=nike'
 ```
 
-Python 版在 [examples/quickstart.py](examples/quickstart.py)（只用标准库，会顺带演示翻页）：`python3 examples/quickstart.py`。
+The Python version is [examples/quickstart.py](examples/quickstart.py) (standard library only, and it fetches a second page too): `python3 examples/quickstart.py`.
 
-返回统一的结构：列表在 `data.items`，下一页用 `page.next_cursor` 传回 `cursor`，这次扣了多少钱在 `meta.billing.amount`，平台不提供的字段为 null 并在 `meta.unavailable` 里写明原因。
+Every endpoint answers in the same shape: the list is in `data.items`, `page.next_cursor` goes back as `cursor` for the next page, what the call cost is in `meta.billing.amount`, and a field the platform does not provide is null with the reason in `meta.unavailable`.
 
-## 让 AI 直接用（MCP）
+## Use it from AI (MCP)
 
-Claude Code：
+Claude Code:
 
 ```bash
 claude mcp add --transport http --scope user okdata https://api.okdata.online/mcp --header "Authorization: Bearer $OKDATA_API_KEY"
 ```
 
-Cursor、Cherry Studio、WorkBuddy 等支持远程 MCP 的客户端：
+Cursor, Windsurf, VS Code and other clients with remote MCP:
 
 ```json
 {
@@ -58,23 +58,25 @@ Cursor、Cherry Studio、WorkBuddy 等支持远程 MCP 的客户端：
 }
 ```
 
-接好以后直接用中文说需求，比如「Instagram 账号搜索：nike」。AI 会先用免费的 `find`、`describe` 找接口和看价格，再用 `call` 取数据。
+Then ask in plain words, for example "Instagram account search: nike". The agent uses the free `find` and `describe` tools to pick the endpoint and see its price, then `call` to fetch the data.
 
-## 常见问题
+## FAQ
 
-**要登录平台账号吗？** 不用。数据是公开内容，okdata 在服务端获取，你的账号完全不参与。
+**Do I need a Instagram account?** No. The data is public content, fetched on the server; your own account is never involved.
 
-**怎么收费？** 每个接口单独定价，表里写的就是一次调用的价格；按条计费的接口按实际返回条数算。调用失败（包括超时）不扣费。新账号送 $0.1 试用额度，之后按需充值，没有订阅。价格页：https://okdata.online/zh/pricing/
+**How is it billed?** Each endpoint has its own price, listed above for one call; endpoints billed per item count what comes back. Failed calls, timeouts included, are free. New accounts get $0.10 to try; after that you top up as you go, with no subscription. Pricing: https://okdata.online/pricing/
 
-**和官方开放平台有什么区别？** 官方开放平台只能读授权给你的账号自己的数据，而且要企业资质和审核；这里是平台上任何人都能看到的公开数据，比如搜索结果、别人的笔记或视频、评论、热榜。
+**Why not the Instagram Graph API?** It mostly reads the business and creator accounts that connect to your app. This returns public profiles, posts, Reels and comments of any public account, with no app review.
 
-**能翻页吗？** 列表接口每页一次调用，把 `page.next_cursor` 原样传回 `cursor` 就是下一页，24 小时内有效。
+**Can I page through results?** Each page of a list is one call: pass `page.next_cursor` back as `cursor` for the next one. A cursor stays valid for 24 hours.
 
-**出错了怎么办？** 每个错误都有固定的 `code`、中文说明 `message_zh`，以及会不会扣费（`charged`）和要不要重试（`retry`）。全部错误码：https://okdata.online/zh/docs/errors/
+**What happens when a call fails?** Every error has a fixed `code`, a `message`, and says whether you were charged (`charged`) and whether to retry (`retry`). All error codes: https://okdata.online/docs/errors/
 
-## English
+## 中文说明
 
-Examples for the okdata Instagram API: 8 live endpoints behind one API key, pay per call from $0.002, failed calls free, no platform login or cookies. Sign up at https://okdata.online/signup/?src=gh-instagram-api, docs at https://okdata.online/apis/, MCP at https://okdata.online/mcp/.
+**Instagram 数据 API · Instagram 账号信息 · Instagram 帖子和 Reels · Instagram 评论采集 · Instagram 话题 · Reels 字幕。**
+
+okdata 的Instagram接口示例：8 个接口在线可用，一个 API Key 调用，按次计费（$0.002 起），失败不扣费，不用登录平台账号、不用 Cookie。中文文档：https://okdata.online/zh/apis/instagram/?src=gh-instagram-api · 注册：https://okdata.online/zh/signup/?src=gh-instagram-api · 接入 AI（MCP）：https://okdata.online/zh/mcp/?src=gh-instagram-api
 
 ## License
 
