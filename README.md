@@ -10,14 +10,14 @@ Examples for the [okdata](https://okdata.online/?src=gh-instagram-api) Instagram
 
 | Endpoint | What it returns | Price | Path |
 |---|---|---|---|
-| [Instagram account profile](https://okdata.online/apis/instagram/users/get/) | An Instagram account by handle: name, bio, followers, following, post count, verification, whether it is private, and the website and links the profile gives. | $0.004 a call | `GET /v1/instagram/users/get` |
-| [Instagram account posts](https://okdata.online/apis/instagram/users/posts/list/) | An account's posts, newest first, 12 a page, or its reels only: caption, likes, comments, plays, time posted, images and the other authors of a collab post. | $0.004 a call | `GET /v1/instagram/users/posts/list` |
-| [Instagram post detail](https://okdata.online/apis/instagram/posts/get/) | One post or reel by shortcode or link: caption, author, likes, comments and plays, images, and the other authors of a collab post. | $0.004 a call | `GET /v1/instagram/posts/get` |
-| [Instagram post comments](https://okdata.online/apis/instagram/posts/comments/list/) | Comments on a post or reel, newest first, about 15 a page: text, commenter, likes and time posted. | $0.004 a call | `GET /v1/instagram/posts/comments/list` |
-| [Instagram comment replies](https://okdata.online/apis/instagram/comments/replies/list/) | The replies to one comment, by the comment's ID and its post's shortcode: text, replier, likes and time posted. | $0.004 a call | `GET /v1/instagram/comments/replies/list` |
-| [Instagram hashtag posts](https://okdata.online/apis/instagram/hashtags/posts/list/) | Public posts under a hashtag, about 10 a page, as search engines find them: caption, author, likes, comments and time posted. Not every post under the tag, and not in time order. | $0.004 a call | `GET /v1/instagram/hashtags/posts/list` |
-| [Instagram reel transcript](https://okdata.online/apis/instagram/posts/transcript/get/) | What is said in a reel or video post, by shortcode or link, with timestamps. Videos up to two minutes long. | $0.004 a call | `GET /v1/instagram/posts/transcript/get` |
-| [Instagram account search](https://okdata.online/apis/instagram/users/search/) | Find Instagram accounts by keyword, about 20 in one answer and no further pages: handle, name, avatar, verification and whether it is private. | $0.002 a call | `GET /v1/instagram/users/search` |
+| [Instagram account profile](https://okdata.online/apis/instagram/users/get/?src=gh-instagram-api) | An Instagram account by handle: name, bio, followers, following, post count, verification, whether it is private, and the website and links the profile gives. | $0.004 a call | `GET /v1/instagram/users/get` |
+| [Instagram account posts](https://okdata.online/apis/instagram/users/posts/list/?src=gh-instagram-api) | An account's posts, newest first, 12 a page, or its reels only: caption, likes, comments, plays, time posted, images and the other authors of a collab post. | $0.004 a call | `GET /v1/instagram/users/posts/list` |
+| [Instagram post detail](https://okdata.online/apis/instagram/posts/get/?src=gh-instagram-api) | One post or reel by shortcode or link: caption, author, likes, comments and plays, images, and the other authors of a collab post. | $0.004 a call | `GET /v1/instagram/posts/get` |
+| [Instagram post comments](https://okdata.online/apis/instagram/posts/comments/list/?src=gh-instagram-api) | Comments on a post or reel, newest first, about 15 a page: text, commenter, likes and time posted. | $0.004 a call | `GET /v1/instagram/posts/comments/list` |
+| [Instagram comment replies](https://okdata.online/apis/instagram/comments/replies/list/?src=gh-instagram-api) | The replies to one comment, by the comment's ID and its post's shortcode: text, replier, likes and time posted. | $0.004 a call | `GET /v1/instagram/comments/replies/list` |
+| [Instagram hashtag posts](https://okdata.online/apis/instagram/hashtags/posts/list/?src=gh-instagram-api) | Public posts under a hashtag, about 10 a page, as search engines find them: caption, author, likes, comments and time posted. Not every post under the tag, and not in time order. | $0.004 a call | `GET /v1/instagram/hashtags/posts/list` |
+| [Instagram reel transcript](https://okdata.online/apis/instagram/posts/transcript/get/?src=gh-instagram-api) | What is said in a reel or video post, by shortcode or link, with timestamps. Videos up to two minutes long. | $0.004 a call | `GET /v1/instagram/posts/transcript/get` |
+| [Instagram account search](https://okdata.online/apis/instagram/users/search/?src=gh-instagram-api) | Find Instagram accounts by keyword, about 20 in one answer and no further pages: handle, name, avatar, verification and whether it is private. | $0.002 a call | `GET /v1/instagram/users/search` |
 
 ## Quick start
 
@@ -64,13 +64,13 @@ Then ask in plain words, for example "Instagram account search: nike". The agent
 
 **Do I need a Instagram account?** No. The data is public content, fetched on the server; your own account is never involved.
 
-**How is it billed?** Each endpoint has its own price, listed above for one call; endpoints billed per item count what comes back. New accounts get $0.10 to try; after that, top-ups start at $10 and never expire, with no subscription. Pricing: https://okdata.online/pricing/ · Billing details: https://okdata.online/docs/billing/
+**How is it billed?** Each endpoint has its own price, listed above for one call; endpoints billed per item count what comes back. New accounts get $0.10 to try; after that, top-ups start at $10 and never expire, with no subscription. Pricing: https://okdata.online/pricing/?src=gh-instagram-api · Billing details: https://okdata.online/docs/billing/?src=gh-instagram-api
 
 **Why not the Instagram Graph API?** It mostly reads the business and creator accounts that connect to your app. This returns public profiles, posts, Reels and comments of any public account, with no app review.
 
 **Can I page through results?** Each page of a list is one call: pass `page.next_cursor` back as `cursor` for the next one. A cursor stays valid for 24 hours.
 
-**What happens when a call fails?** Every error has a fixed `code`, a `message`, and says whether you were charged (`charged`) and whether to retry (`retry`). All error codes: https://okdata.online/docs/errors/
+**What happens when a call fails?** Every error has a fixed `code`, a `message`, and says whether you were charged (`charged`) and whether to retry (`retry`). All error codes: https://okdata.online/docs/errors/?src=gh-instagram-api
 
 ## 中文说明
 
