@@ -4,7 +4,7 @@
 
 Examples for the [okdata](https://okdata.online/?src=gh-instagram-api) Instagram API: 8 live endpoints behind one API key, pay per call from $0.002. No Instagram login, no cookies and no browser, so there is no account to get blocked.
 
-[Sign up free ($0.10 of trial credit)](https://okdata.online/signup/?src=gh-instagram-api) · [All Instagram endpoints](https://okdata.online/apis/instagram/?src=gh-instagram-api) · [Use it from Claude, Cursor or any MCP client](https://okdata.online/mcp/?src=gh-instagram-api)
+[Sign up free (free trial: up to 333 calls)](https://okdata.online/signup/?src=gh-instagram-api) · [All Instagram endpoints](https://okdata.online/apis/instagram/?src=gh-instagram-api) · [Use it from Claude, Cursor or any MCP client](https://okdata.online/mcp/?src=gh-instagram-api)
 
 ## Endpoints
 
@@ -64,7 +64,7 @@ Then ask in plain words, for example "Instagram account search: nike". The agent
 
 **Do I need a Instagram account?** No. The data is public content, fetched on the server; your own account is never involved.
 
-**How is it billed?** Each endpoint has its own price, listed above for one call; endpoints billed per item count what comes back. New accounts get $0.10 to try; after that, top-ups start at $10 and never expire, with no subscription. Pricing: https://okdata.online/pricing/?src=gh-instagram-api · Billing details: https://okdata.online/docs/billing/?src=gh-instagram-api
+**How is it billed?** Each endpoint has its own price, listed above for one call; endpoints billed per item count what comes back. New accounts get a free trial of up to 333 calls; after that, top-ups start at $10 and never expire, with no subscription. Pricing: https://okdata.online/pricing/?src=gh-instagram-api · Billing details: https://okdata.online/docs/billing/?src=gh-instagram-api
 
 **Why not the Instagram Graph API?** It mostly reads the business and creator accounts that connect to your app. This returns public profiles, posts, Reels and comments of any public account, with no app review.
 
